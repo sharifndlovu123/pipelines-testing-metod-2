@@ -24,7 +24,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: ./Dockerfile
+          context: .
           platforms: linux/amd64,linux/arm64
           push: true  # Set to true because you are pushing the image to Docker Hub
           tags: ${{ vars.DOCKER_USERNAME }}/${{ github.event.repository.name }}:latest
